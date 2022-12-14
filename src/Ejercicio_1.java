@@ -57,7 +57,6 @@ public class Ejercicio_1 {
 	public static void main(String[] args) {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
-		System.out.println(sacaMMC(142857));
 		while (true) {
 			System.out.println("CALCULADOR DE MMC\n-----------------");
 			System.out.println("1.- Calcular el MMC de n");
