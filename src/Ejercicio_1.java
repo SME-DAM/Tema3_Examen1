@@ -24,10 +24,7 @@ public class Ejercicio_1 {
 		if (origen.length != numero.length) return false;
 		ordenaCaracteres(origen);
 		ordenaCaracteres(numero);
-		for (int i = 0; i < origen.length; i++) {
-			if (origen[i]!= numero[i]) return false;
-		}
-		return true;
+		return String.valueOf(origen).equals(String.valueOf(numero));
 	}
 	private static int sacaMMC(int numero) {
 		int mmc = 0;
