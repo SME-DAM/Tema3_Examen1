@@ -1,31 +1,18 @@
+import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio_1 {
 
-	static public void ordenaCaracteres(char[] vector) {
-		boolean working = true;
-		while (working) {
-			working=false;
-			for(int index = 0; index < vector.length - 1; index++) {
-				if (vector[index]>vector[index+1]) {
-					char temp = vector[index];
-					vector[index] = vector[index + 1];
-					vector[index + 1] = temp;
-					working=true;
-				}
-			}
-		}
-	}
-	
 	private static boolean comparaCifras(int base, int multiplicando) {
 		char[] numero = String.format("%d",base*multiplicando).toCharArray();
 		char[] origen = String.format("%d", base).toCharArray();
 		if (origen.length != numero.length) return false;
-		ordenaCaracteres(origen);
-		ordenaCaracteres(numero);
+		Arrays.sort(origen);
+		Arrays.sort(numero);
 		return String.valueOf(origen).equals(String.valueOf(numero));
 	}
+	
 	private static int sacaMMC(int numero) {
 		int mmc = 0;
 		for (int i = 1; i < 10; i++) {
